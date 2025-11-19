@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nader Fkih Hassen - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Portfolio of Nader Fkih Hassen — web developer. Projects include a Shopping Cart Calculator and other web apps."
+    />
+  </head>
+  <body>
+    <nav id="navbar" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="brand" href="#hero">Nader Fkih Hassen</a>
+        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul id="nav-links" class="nav-links" role="menu">
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero container" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Hi, I'm Nader Fkih Hassen</h1>
+        <p class="lead">
+          Frontend & JavaScript developer building simple, accessible web apps
+          and tools.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
+        </div>
+        <p class="small">
+          Currently building a Shopping Cart Calculator and other productivity
+          tools.
+        </p>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <img src="Portfolio img.jpg" alt="Portrait of Nader Fkih Hassen" />
+      </div>
+    </section>
+
+    <section
+      id="about"
+      class="section container"
+      aria-labelledby="about-heading"
+    >
+      <h2 id="about-heading">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a web developer focused on creating clear, maintainable
+            interfaces and small tools that solve everyday problems. I enjoy
+            working with JavaScript, HTML, and CSS and learning modern workflows
+            and testing practices.
+          </p>
+          <p>My current project is .</p>
+        </div>
+        <div class="about-meta">
+          <ul>
+            <li><strong>Location:</strong> Tunis, Tunisia</li>
+            <li><strong>Role:</strong> Frontend Developer</li>
+            <li>
+              <strong>Availability:</strong> Open to freelance & remote
+              opportunities
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="skills"
+      class="section container"
+      aria-labelledby="skills-heading"
+    >
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 & Semantic Markup</li>
+        <li>CSS3 — Flexbox, Grid, Responsive Design</li>
+        <li>JavaScript (ES6+), DOM, Fetch API</li>
+        <li>Tooling — npm, bundlers, Git</li>
+        <li>Testing — unit tests & basic automation</li>
+      </ul>
+    </section>
+
+    <section
+      id="projects"
+      class="section container"
+      aria-labelledby="projects-heading"
+    >
+      <h2 id="projects-heading">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Shopping Cart Calculator</h3>
+          <p>
+            A small interactive web app to add items, calculate totals, taxes,
+            discounts and persist cart state in localStorage.
+          </p>
+          <p class="project-meta">
+            <strong>Tech:</strong> HTML, CSS, JavaScript
+          </p>
+          <p>
+            <a href="shopping-cart/index.html" class="link">Open project</a>
+            <a href="#" class="link">Source</a>
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Task Timer</h3>
+          <p>
+            Lightweight Pomodoro-style task timer with start/pause and session
+            tracking.
+          </p>
+          <p class="project-meta">
+            <strong>Tech:</strong> JavaScript, Web APIs
+          </p>
+          <p><a href="#" class="link">Demo</a></p>
+        </article>
+
+        <article class="project-card">
+          <h3>Responsive Portfolio</h3>
+          <p>
+            A minimal, accessible portfolio template that adapts to mobile and
+            desktop layouts.
+          </p>
+          <p class="project-meta"><strong>Tech:</strong> HTML, CSS</p>
+          <p><a href="#" class="link">Live</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="section container"
+      aria-labelledby="contact-heading"
+    >
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        If you'd like to work together or request the source for any project,
+        send a message below.
+      </p>
+
+      <form
+        id="contact-form"
+        action="mailto:you@example.com"
+        method="post"
+        enctype="text/plain"
+        aria-label="Contact form"
+      >
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send</button>
+          <button type="reset" class="btn btn-muted">Reset</button>
+        </div>
+        <p class="form-note">
+          Or email directly:
+          <a href="mailto:nader@example.com">naderfkihhassen@gmail.com</a>
+        </p>
+      </form>
+    </section>
+
+    <footer class="site-footer container">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Nader Fkih Hassen — Built with care.</p>
+
+        <ul class="social">
+          <li class="Github">
+            <a href="https://github.com/naderfkihhassen" target="_blank">
+              <img src="Github.png" alt="Github logo" />
+            </a>
+          </li>
+
+          <li class="Linkedin">
+            <a
+              href="https://www.linkedin.com/in/nader-fkih-hassen/" target="_blank">
+              <img src="Linkedin.png" alt="LinkedIn logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
