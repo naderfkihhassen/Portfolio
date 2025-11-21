@@ -109,20 +109,34 @@
           </p>
           <p>
             <a href="shopping-cart/index.html" class="link">Open project</a>
-            <a href="#" class="link">Source</a>
+            <a
+              href="https://github.com/naderfkihhassen/ShoppingCartCalculator"
+              class="link"
+              >Source</a
+            >
           </p>
         </article>
 
         <article class="project-card">
-          <h3>Task Timer</h3>
+          <h3>YouTube Clone Project</h3>
           <p>
-            Lightweight Pomodoro-style task timer with start/pause and session
-            tracking.
+            This is a YouTube Clone project I built as a personal practice after
+            learning HTML, CSS, and JavaScript. I originally followed a
+            3-year-old tutorial for the HTML/CSS basics, and then expanded it by
+            applying what I learned in JavaScript to make it more modern and
+            interactive.
           </p>
           <p class="project-meta">
-            <strong>Tech:</strong> JavaScript, Web APIs
+            <strong>Tech:</strong> HTML, CSS, JavaScript
           </p>
-          <p><a href="#" class="link">Demo</a></p>
+          <p>
+            <a href="https://naderfkihhassen.github.io/My-Youtube/" class="link"
+              >Open project</a
+            >
+            <a href="https://github.com/naderfkihhassen/My-Youtube" class="link"
+              >Source</a
+            >
+          </p>
         </article>
 
         <article class="project-card">
@@ -131,8 +145,15 @@
             A minimal, accessible portfolio template that adapts to mobile and
             desktop layouts.
           </p>
-          <p class="project-meta"><strong>Tech:</strong> HTML, CSS</p>
-          <p><a href="#" class="link">Live</a></p>
+          <p class="project-meta">
+            <strong>Tech:</strong> HTML, CSS, JavaScript
+          </p>
+          <p>
+            <a href="#" class="link">Open project</a>
+            <a href="https://github.com/naderfkihhassen/Portfolio" class="link"
+              >Source</a
+            >
+          </p>
         </article>
       </div>
     </section>
@@ -148,13 +169,15 @@
         send a message below.
       </p>
 
-      <form
-        id="contact-form"
-        action="mailto:you@example.com"
-        method="post"
-        enctype="text/plain"
-        aria-label="Contact form"
-      >
+      <form id="contact-form" aria-label="Contact form">
+        <input
+          type="hidden"
+          name="_subject"
+          value="New message from portfolio!"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required />
 
@@ -170,7 +193,9 @@
         </div>
         <p class="form-note">
           Or email directly:
-          <a href="mailto:nader@example.com">naderfkihhassen@gmail.com</a>
+          <a href="mailto:naderfkihhassen@gmail.com"
+            >naderfkihhassen@gmail.com</a
+          >
         </p>
       </form>
     </section>
@@ -188,7 +213,9 @@
 
           <li class="Linkedin">
             <a
-              href="https://www.linkedin.com/in/nader-fkih-hassen/" target="_blank">
+              href="https://www.linkedin.com/in/nader-fkih-hassen/"
+              target="_blank"
+            >
               <img src="Linkedin.png" alt="LinkedIn logo" />
             </a>
           </li>
@@ -198,6 +225,53 @@
 
     <script src="script.js"></script>
     <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+        });
+      });
+
+      const contactForm = document.getElementById("contact-form");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        submitButton.textContent = "Sending...";
+        submitButton.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        fetch("https://formsubmit.co/naderfkihhassen@gmail.com", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Message sent successfully!");
+              contactForm.reset();
+            } else {
+              alert("Failed to send message. Please try again.");
+            }
+          })
+          .catch((error) => {
+            alert(
+              "Error sending message. Please email me directly at naderfkihhassen@gmail.com"
+            );
+          })
+          .finally(() => {
+            submitButton.textContent = "Send";
+            submitButton.disabled = false;
+          });
+      });
+
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
