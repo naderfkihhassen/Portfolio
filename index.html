@@ -3,267 +3,339 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nader Fkih Hassen - Web Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
-      content="Portfolio of Nader Fkih Hassen — Web Developer specializing in JavaScript, React, and Node.js."
+      content="Nader Fkih Hassen: Full-Stack Developer. Thiabee marketplace, DrWarsha iOS app, production web and mobile."
     />
+    <title>Nader Fkih Hassen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav id="navbar" aria-label="Main navigation">
-      <div class="container nav-inner">
-        <a class="brand" href="#hero">Nader Fkih Hassen</a>
-        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
-          Menu
-        </button>
-        <ul id="nav-links" class="nav-links" role="menu">
-          <li role="none"><a role="menuitem" href="#about">About</a></li>
-          <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
-          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
-          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section id="hero" class="hero container" aria-labelledby="hero-title">
-      <div class="hero-left">
-        <h1 id="hero-title">Hi, I'm Nader Fkih Hassen</h1>
-        <p class="lead">
-          Web Developer building practical applications with JavaScript, React, and Node.js.
-        </p>
-        <div class="hero-cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn btn-outline" href="#contact">Contact Me</a>
-        </div>
-        <p class="small">
-          Recent Computer Science graduate passionate about creating user-friendly web solutions.
-        </p>
-      </div>
-      <div class="hero-right" aria-hidden="true">
-        <img src="Portfolio img.jpg" alt="Portrait of Nader Fkih Hassen" />
-      </div>
-    </section>
-
-    <section
-      id="about"
-      class="section container"
-      aria-labelledby="about-heading"
-    >
-      <h2 id="about-heading">About Me</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a web developer who enjoys building applications that solve real problems. I recently graduated with a degree in Computer Science and completed an internship where I worked on a full-stack lawyer management system.
-          </p>
-          <p>
-            I'm comfortable with both frontend and backend development, and I'm always learning new technologies to improve my skills.
-          </p>
-        </div>
-        <div class="about-meta">
-          <ul>
-            <li><strong>Location:</strong> Tunisia</li>
-            <li><strong>Education:</strong> Computer Science</li>
-            <li><strong>Status:</strong> Open to opportunities</li>
-          </ul>
+    <header class="site-header" id="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top">Nader Fkih Hassen</a>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">
+              EN
+            </button>
+            <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">
+              FR
+            </button>
+          </div>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            data-i18n="nav.menu"
+          >
+            Menu
+          </button>
+          <nav aria-label="Primary">
+            <ul class="nav-links" id="nav-links">
+              <li><a href="#work" data-i18n="nav.work">Work</a></li>
+              <li><a href="#about" data-i18n="nav.about">About</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section
-      id="skills"
-      class="section container"
-      aria-labelledby="skills-heading"
-    >
-      <h2 id="skills-heading">Skills & Technologies</h2>
-      <ul class="skills-list">
-        <li>JavaScript (ES6+)</li>
-        <li>React & Next.js</li>
-        <li>Node.js & NestJS</li>
-        <li>HTML5 & CSS3</li>
-        <li>PostgreSQL & Prisma</li>
-        <li>Git & GitHub</li>
-        <li>REST APIs</li>
-        <li>Responsive Design</li>
-      </ul>
-    </section>
-
-    <section
-      id="projects"
-      class="section container"
-      aria-labelledby="projects-heading"
-    >
-      <h2 id="projects-heading">Projects</h2>
-      
-      <div class="featured-project">
-        <h3>Task Management System</h3>
-        <p>
-          A full-stack application for managing tasks with user authentication and sharing capabilities. Built as a learning project to understand backend development and database design.
-        </p>
-        <p class="project-meta">
-          <strong>Technologies:</strong> NestJS, PostgreSQL, Prisma, JWT, HTML/CSS/JavaScript
-        </p>
-        <p class="project-features">
-          • User authentication & authorization<br>
-          • Task sharing with permissions<br>
-          • RESTful API design<br>
-          • Database modeling with Prisma
-        </p>
-        <p>
-          <a href="https://nest-js-jwt-postgre-sql-fe.vercel.app/" class="link" target="_blank">View Project</a>
-          <a href="https://github.com/naderfkihhassen/NestJS_JWT_PostgreSQL" class="link">View Code</a>
-        </p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>AI Chatbot</h3>
-          <p>
-            Chatbot interface that connects to different AI models. Users can switch between models and manage API keys.
-          </p>
-          <p class="project-meta">
-            <strong>Tech:</strong> JavaScript, OpenRouter API, HTML/CSS
-          </p>
-          <p>
-            <a href="https://naderfkihhassen.github.io/Chatbot/" class="link" target="_blank">View Project</a>
-            <a href="https://github.com/naderfkihhassen/Chatbot" class="link">View Code</a>
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Kanban Todo List</h3>
-          <p>
-            Task management board with drag-and-drop, category filters, and statistics. Helps visualize and organize daily tasks.
-          </p>
-          <p class="project-meta">
-            <strong>Tech:</strong> JavaScript, HTML5, CSS3
-          </p>
-          <p>
-            <a href="https://naderfkihhassen.github.io/ToDoList/" class="link" target="_blank">View Project</a>
-            <a href="https://github.com/naderfkihhassen/ToDoList" class="link">View Code</a>
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Productivity Timer</h3>
-          <p>
-            Pomodoro-style timer with customizable intervals and statistics to help maintain focus during work sessions.
-          </p>
-          <p class="project-meta">
-            <strong>Tech:</strong> JavaScript, HTML5, CSS3
-          </p>
-          <p>
-            <a href="https://naderfkihhassen.github.io/ProductivityTracker/" class="link" target="_blank">View Project</a>
-            <a href="https://github.com/naderfkihhassen/ProductivityTracker" class="link">View Code</a>
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Expense Tracker</h3>
-          <p>
-            Personal finance tool for tracking income and expenses with categories and visual charts.
-          </p>
-          <p class="project-meta">
-            <strong>Tech:</strong> JavaScript, Chart.js, HTML/CSS
-          </p>
-          <p>
-            <a href="https://naderfkihhassen.github.io/ExpenseTracker/" class="link" target="_blank">View Project</a>
-            <a href="https://github.com/naderfkihhassen/ExpenseTracker" class="link">View Code</a>
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Weather App</h3>
-          <p>
-            Simple weather application that displays current weather and forecasts using a weather API.
-          </p>
-          <p class="project-meta">
-            <strong>Tech:</strong> JavaScript, Weather API, HTML/CSS
-          </p>
-          <p>
-            <a href="https://naderfkihhassen.github.io/WeatherApp/" class="link" target="_blank">View Project</a>
-            <a href="https://github.com/naderfkihhassen/WeatherApp" class="link">View Code</a>
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Youtube UI</h3>
-          <p>
-            Finished a HTML CSS JS course about making Youtube UI then personally updated it to the current youtube interface .
-          </p>
-          <p class="project-meta">
-            <strong>Tech:</strong> HTML, CSS, JavaScript
-          </p>
-          <p>
-            <a href="https://naderfkihhassen.github.io/My-Youtube/" class="link">View Project</a>
-            <a href="https://github.com/naderfkihhassen/My-Youtube" class="link">View Code</a>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section
-      id="contact"
-      class="section container"
-      aria-labelledby="contact-heading"
-    >
-      <h2 id="contact-heading">Get In Touch</h2>
-      <p>
-        I'm currently looking for opportunities to start my career as a web developer. Feel free to reach out if you'd like to work together or just want to connect!
-      </p>
-
-      <form id="contact-form" aria-label="Contact form">
-        <input
-          type="hidden"
-          name="_subject"
-          value="New message from portfolio!"
-        />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <div class="form-actions">
-          <button type="submit" class="btn">Send Message</button>
-          <button type="reset" class="btn btn-muted">Reset</button>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-brand">
+        <div class="hero-visual" aria-hidden="true">
+          <img
+            src="Portfolio%20img.jpg"
+            alt=""
+            width="800"
+            height="1000"
+            decoding="async"
+          />
+          <div class="hero-wash"></div>
         </div>
-        <p class="form-note">
-          Or email me directly at:
-          <a href="mailto:naderfkihhassen@gmail.com">naderfkihhassen@gmail.com</a>
-        </p>
-      </form>
-    </section>
-
-    <footer class="site-footer container">
-      <div class="footer-inner">
-        <p>© <span id="year"></span> Nader Fkih Hassen</p>
-
-        <ul class="social">
-          <li class="Github">
-            <a href="https://github.com/naderfkihhassen" target="_blank" aria-label="GitHub Profile">
-              <img src="Github.png" alt="Github logo" />
-            </a>
-          </li>
-
-          <li class="Linkedin">
-            <a
-              href="https://www.linkedin.com/in/nader-fkih-hassen/"
-              target="_blank"
-              aria-label="LinkedIn Profile"
+        <div class="shell hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Rejiche, Tunisia</p>
+          <h1 id="hero-brand" class="hero-brand">Nader Fkih Hassen</h1>
+          <p class="hero-role" data-i18n="hero.role">
+            Full-Stack Developer (Web &amp; Mobile)
+          </p>
+          <p class="hero-lead" data-i18n="hero.lead">
+            I ship production products end to end: a fashion marketplace for Saudi
+            Arabia and an iOS automotive care app with its API.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#work" data-i18n="hero.ctaWork">View work</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"
+              >Contact</a
             >
-              <img src="Linkedin.png" alt="LinkedIn logo" />
-            </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="shell">
+          <header class="section-head">
+            <h2 id="work-title" data-i18n="work.title">Selected work</h2>
+            <p data-i18n="work.intro">
+              Two live products from freelance work, plus a graduation project.
+            </p>
+          </header>
+
+          <article class="case reveal" id="thiabee">
+            <div class="case-meta">
+              <p class="case-label" data-i18n="thiabee.label">Marketplace</p>
+              <h3>Thiabee</h3>
+              <p class="case-role" data-i18n="thiabee.role">
+                Full-stack freelance · web marketplace and mobile shell
+              </p>
+            </div>
+            <div class="case-body">
+              <p data-i18n="thiabee.summary">
+                Saudi preloved fashion marketplace: browse, sell, checkout,
+                wallet, shipping, and admin tools in Arabic and English.
+              </p>
+              <ul class="case-points">
+                <li data-i18n="thiabee.b1">
+                  React 18, TypeScript, Vite, Tailwind SPA with Express API and
+                  PostgreSQL (Supabase)
+                </li>
+                <li data-i18n="thiabee.b2">
+                  Firebase auth, JWT for PostgREST, TryOTO shipping webhooks,
+                  Moyasar payments
+                </li>
+                <li data-i18n="thiabee.b3">
+                  Admin dashboard, i18n with RTL, Expo WebView shell (tabs, push,
+                  bridge)
+                </li>
+              </ul>
+              <p class="stack-line">
+                <span data-i18n="case.stack">Stack:</span>
+                React, TypeScript, Express, Prisma, PostgreSQL, Firebase, Expo
+              </p>
+              <div class="case-links">
+                <a
+                  class="btn"
+                  href="https://thiabee.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="thiabee.live"
+                  >Open website</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="case reveal" id="drwarsha">
+            <div class="case-meta">
+              <p class="case-label" data-i18n="drwarsha.label">iOS + API</p>
+              <h3>DrWarsha</h3>
+              <p class="case-role" data-i18n="drwarsha.role">
+                Full-stack freelance · SwiftUI app and Cloudflare Workers API
+              </p>
+            </div>
+            <div class="case-body">
+              <p data-i18n="drwarsha.summary">
+                Automotive care for car owners and workshops in Saudi Arabia:
+                requests, chat, diagnosis, and maintenance payments.
+              </p>
+              <ul class="case-points">
+                <li data-i18n="drwarsha.b1">
+                  Native iOS in Swift / SwiftUI (owner and workshop roles,
+                  onboarding, light/dark)
+                </li>
+                <li data-i18n="drwarsha.b2">
+                  TypeScript API on Cloudflare Workers (D1, R2): Apple sign-in,
+                  OTP, sessions, Stream Pay
+                </li>
+                <li data-i18n="drwarsha.b3">
+                  Incident flows, workshop responses, in-app chat, notifications,
+                  EN/AR with RTL
+                </li>
+              </ul>
+              <p class="stack-line">
+                <span data-i18n="case.stack">Stack:</span>
+                SwiftUI, Cloudflare Workers, D1, R2, TypeScript
+              </p>
+              <p class="store-note" role="note" data-i18n="drwarsha.warning">
+                App Store note: the listing is only visible in Saudi Arabia.
+                Outside KSA, the store page may not open or may not show the app.
+              </p>
+              <div class="case-links">
+                <a
+                  class="btn"
+                  href="https://drwarsha.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="drwarsha.site"
+                  >Open website</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  href="https://apps.apple.com/us/app/drwarsha/id6788861335"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="drwarsha.store"
+                  >App Store (KSA)</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="case case-secondary reveal" id="lura">
+            <div class="case-meta">
+              <p class="case-label" data-i18n="lura.label">Internship / PFE</p>
+              <h3>Lura</h3>
+              <p class="case-role" data-i18n="lura.role">
+                StartupFACTORY · NestJS + Next.js legal case platform
+              </p>
+            </div>
+            <div class="case-body">
+              <p data-i18n="lura.summary">
+                Graduation project: case management with Magic Link / JWT auth,
+                RBAC, Docker, and generative AI search via Dify.
+              </p>
+              <p class="stack-line">
+                <span data-i18n="case.stack">Stack:</span>
+                NestJS, Next.js, PostgreSQL, Docker, Dify
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="shell about-grid">
+          <div class="about-copy reveal">
+            <h2 id="about-title" data-i18n="about.title">About</h2>
+            <p data-i18n="about.p1">
+              Computer Science graduate (ISIMA, Mahdia, 2025). After my degree I
+              focused on shipping real products as an independent full-stack
+              developer: web platforms, native iOS, and cloud APIs.
+            </p>
+            <p data-i18n="about.p2">
+              I care about clear architecture, secure auth, and code that holds
+              up in production. Open to roles in software development and
+              information systems.
+            </p>
+          </div>
+          <div class="skills reveal">
+            <h3 data-i18n="skills.title">Skills</h3>
+            <dl class="skill-groups">
+              <div>
+                <dt data-i18n="skills.front">Frontend</dt>
+                <dd>React, Next.js, TypeScript, Tailwind CSS</dd>
+              </div>
+              <div>
+                <dt data-i18n="skills.back">Backend</dt>
+                <dd>Node.js, NestJS, Express, Cloudflare Workers, REST, JWT</dd>
+              </div>
+              <div>
+                <dt data-i18n="skills.mobile">Mobile</dt>
+                <dd>SwiftUI, Expo / React Native (WebView shell)</dd>
+              </div>
+              <div>
+                <dt data-i18n="skills.data">Data &amp; tools</dt>
+                <dd>PostgreSQL, Prisma, D1, R2, Docker, Git, Postman</dd>
+              </div>
+            </dl>
+            <p class="langs" data-i18n="about.langs">
+              Languages: Arabic (native), English (fluent), French (professional)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="shell contact-grid">
+          <div class="contact-copy reveal">
+            <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+            <p data-i18n="contact.intro">
+              Looking for a full-stack or product engineering role. Write below
+              or email me directly.
+            </p>
+            <p class="contact-email">
+              <a href="mailto:naderfkihhassen@gmail.com"
+                >naderfkihhassen@gmail.com</a
+              >
+            </p>
+            <ul class="social">
+              <li>
+                <a
+                  href="https://linkedin.com/in/nader-fkih-hassen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <img src="Linkedin.png" alt="" width="40" height="40" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/naderfkihhassen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <img src="Github.png" alt="" width="40" height="40" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form
+            class="contact-form reveal"
+            id="contact-form"
+            action="https://formsubmit.co/naderfkihhassen@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Portfolio contact" />
+            <label for="name" data-i18n="contact.name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+
+            <label for="email" data-i18n="contact.email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+            />
+
+            <label for="message" data-i18n="contact.message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn" data-i18n="contact.send">
+                Send message
+              </button>
+              <button type="reset" class="btn btn-ghost" data-i18n="contact.reset">
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>
+          © <span id="year"></span> Nader Fkih Hassen
+        </p>
+        <a href="#top" data-i18n="footer.top">Back to top</a>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

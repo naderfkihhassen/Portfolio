@@ -1,62 +1,41 @@
-# 📁 Nader Fkih Hassen — Portfolio
+# Nader Fkih Hassen: Portfolio
 
-A clean, responsive, and accessible personal portfolio website built using **HTML**, **CSS**, and **JavaScript**.  
-This site highlights my skills, projects, and ways to get in touch.
+Personal portfolio site (static HTML, CSS, JavaScript) hosted on GitHub Pages.
 
----
+## Live
 
-## 🌐 Live Demo
+https://naderfkihhassen.github.io/Portfolio/
 
-`https://naderfkihhassen.github.io/Portfolio/`
+## Featured work
 
----
+- **Thiabee**: Saudi fashion marketplace ([thiabee.com](https://thiabee.com))
+- **DrWarsha**: iOS automotive care app ([drwarsha.com](https://drwarsha.com), App Store visible in Saudi Arabia)
+- **Lura**: graduation / internship project (StartupFACTORY)
 
+## Features
 
+- FR / EN language toggle (stored in `localStorage` as `portfolio.lang`)
+- Responsive layout
+- Contact form via FormSubmit
+- No build step: edit files and push to `main`
 
-## ✨ Features
+## Stack
 
-### ✔ Responsive Layout  
-Adapts cleanly to both mobile and desktop screens.
+- HTML5
+- CSS3 (custom properties, responsive layout)
+- JavaScript (ES6+)
+- Google Fonts: Syne, Source Sans 3
 
-### ✔ Accessible Markup  
-- Semantic HTML  
-- ARIA attributes  
-- Keyboard-friendly navigation
+## Local preview
 
-### ✔ Projects Section  
-Includes:  
-- **Shopping Cart Calculator**  
-- **Task Timer**  
-- **Responsive Portfolio Template**
-
-Each project displays a short description and used technologies.
-
-### ✔ Contact Form  
-Uses a `mailto:` form with:  
-- Name  
-- Email  
-- Message  
-- Direct email link
-
-### ✔ Dynamic Footer  
-Automatically displays the current year using JavaScript.
-
----
-
-## 🛠️ Tech Stack
-
-- **HTML5**
-- **CSS3** (Flexbox, Grid, Responsive Design)
-- **JavaScript (ES6+)**
-- **Web APIs**
-- **LocalStorage** (for Saving Cart Data)
-
----
-
-## 🚀 Getting Started
-
-Clone the repository:
+Open `index.html` in a browser, or from this folder:
 
 ```bash
-git clone https://github.com/naderfkihhassen/Portfolio.git
+python3 -m http.server 8080
+```
 
+Then visit `http://localhost:8080`.
+
+## Edit copy
+
+UI strings live in `script.js` under `translations.en` and `translations.fr`. Mark elements with `data-i18n="key"`.
